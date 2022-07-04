@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "items",
+  "info": {
+    "singularName": "item",
+    "pluralName": "items",
+    "displayName": "Item",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "productName": {
+      "type": "string"
+    },
+    "tyreType": {
+      "type": "enumeration",
+      "enum": [
+        "Cijelogodišnje",
+        "Ljetne",
+        "Zimske"
+      ]
+    },
+    "price": {
+      "type": "biginteger"
+    },
+    "barcode": {
+      "type": "biginteger",
+      "unique": true,
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
